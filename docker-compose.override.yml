@@ -1,0 +1,10 @@
+  
+version: '3.3'
+
+services: 
+  db: 
+    environment: 
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_DATABASE=cleverpush
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=secret

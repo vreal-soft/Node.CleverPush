@@ -1,0 +1,16 @@
+version: '3.3'
+
+services: 
+  db: 
+    container_name: clever-push-container
+    image: mysql:5.7
+    expose: 
+      - 3306
+    volumes:
+      - ./db_data_container:/docker-entrypoint-initdb.d
+      - db_data_container:/data/db
+    ports:
+      - 3306:3306
+
+volumes: 
+  db_data_container:
